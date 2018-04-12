@@ -39,4 +39,6 @@ for TEST in $(tr "\0" "\n" < /proc/device-tree/compatible); do
 	fi
 done
 
+grep -q bootrr-halt /proc/cmdline && echo ~~~~~~~~~~~~~~~~~~~~~
+
 exec sh </dev/console >/dev/console 2>/dev/console
